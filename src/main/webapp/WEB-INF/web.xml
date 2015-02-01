@@ -11,16 +11,16 @@
 		<servlet-name>curriculum</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-	
-<!-- 	<context-param> -->
-<!-- 		 <param-name>contextConfigLocation</param-name> -->
-<!-- 		 <param-value>/WEB-INF/curriculum-servlet.xml</param-value> -->
-<!-- 	 </context-param> -->
- 
-<!-- 	 <listener> -->
-<!-- 		 <listener-class> -->
-<!-- 		 org.springframework.web.context.ContextLoaderListener -->
-<!-- 		 </listener-class> -->
-<!-- 	 </listener> -->
+
+	<!-- /tasks/* urls are only usable by the app -->
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>tasks</web-resource-name>
+			<url-pattern>/tasks/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>admin</role-name>
+		</auth-constraint>
+	</security-constraint>
 </web-app>
 

@@ -6,9 +6,12 @@ import lombok.Data;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @Data
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
+@JsonPropertyOrder({"area", "institution", "city", "diploma", "courses",
+		"startDate", "endDate"})
 public class EducationEntry {
 
 	@JsonProperty("Institution")
@@ -16,9 +19,6 @@ public class EducationEntry {
 
 	@JsonProperty("Area")
 	private String			area;
-
-	@JsonProperty("Study type")
-	private String			studyType;
 
 	@JsonProperty("Start date")
 	private String			startDate;
@@ -31,5 +31,8 @@ public class EducationEntry {
 
 	@JsonProperty("Courses")
 	private List<String>	courses;
+
+	@JsonProperty("City")
+	private String			city;
 
 }

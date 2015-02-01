@@ -10,7 +10,8 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @Data
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
-@JsonPropertyOrder({"comment", "personalInfo", "networks"})
+@JsonPropertyOrder({"comment", "about", "networks", "workExperience",
+		"education", "languages"})
 public class Curriculum {
 
 	@JsonProperty("Comment")

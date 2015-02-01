@@ -26,10 +26,4 @@ public class About {
 	@JsonProperty("Phone")
 	private String		phone;
 
-	@JsonProperty("LinkedIn")
-	private String		linkedIn;
-
-	@JsonProperty("Github")
-	private String		github;
-
 }
